@@ -32,6 +32,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
+      external: ['sse'], // 将sse添加到外部依赖列表
       output: {
         manualChunks: {
           'react-core': ['react', 'react-dom', 'react-router-dom'],
